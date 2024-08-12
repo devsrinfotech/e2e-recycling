@@ -124,6 +124,45 @@ body {
   color: #fff;
 }
 
+.pt-10{
+  padding-top: 10px;
+}
+
+.pt-20{
+  padding-top: 20px;
+}
+
+.pt-40{
+  padding-top: 40px;
+}
+
+.pb-10{
+  padding-bottom: 10px;
+}
+
+.pb-20{
+  padding-bottom: 20px;
+}
+
+.pb-40{
+  padding-bottom: 40px;
+}
+
+
+.card {
+  text-align: center;
+  padding: 15px;
+  width: 90%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 41vh;
+ 
+}
+
 .section {
   padding-top: 100px;
   padding-bottom: 70px;
@@ -250,7 +289,7 @@ body {
   box-shadow: 0 4px 5px 0 rgba(51, 61, 73, 0.24);
   border: none;
   border-radius: 100px 0px 100px 100px;
-  background-image: linear-gradient(135deg, #29323C 0%, #485563 100%);
+  background-image: linear-gradient(135deg, #57cd2d 0%, #3d7e25 100%);
   margin-bottom: 40px;
   font-weight: 700;
   font-size: 12px;
@@ -266,7 +305,7 @@ body {
   position: relative;
 }
 .btn-primary-line:hover {
-  background-image: linear-gradient(-135deg, #29323C 0%, #485563 100%);
+  background-image: linear-gradient(-135deg, #57cd2d 0%, #3d7e25 100%);
   color: #fff;
 }
 
@@ -321,7 +360,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: 1;
-  background-image: linear-gradient(-135deg, #29323C 0%, #485563 100%);
+  background-image: linear-gradient(-135deg, #57cd2d 0%, #3d7e25 100%);
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -495,6 +534,7 @@ header
   transition: all 0.3s ease 0s;
 }
 .header-area .main-nav .logo img {
+  max-width: 60%;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -520,7 +560,7 @@ header
   display: block;
   font-weight: 600;
   font-size: 14px;
-  color: #6F8BA4;
+  color: #000;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -779,8 +819,8 @@ header
   z-index: 2;
 }
 .header-area .main-nav .header-buttons li .btn-nav-primary:hover {
-  border: 1px solid #333D49;
-  background: #333D49;
+  border: 1px solid #409123;
+  background: #57cd2d;
   color: #fff;
 }
 .header-area.header-sticky {
@@ -1012,7 +1052,7 @@ welcome
 }
 .welcome-area .right-bg {
   float: right;
-  width: 89%;
+  /* width: 89%; */
   overflow: hidden;
   position: relative;
   z-index: 1;
@@ -1026,7 +1066,7 @@ welcome
   width: 100%;
   height: 100%;
   z-index: 1;
-  background-image: linear-gradient(135deg, #29323C 0%, #485563 100%);
+  background-image: linear-gradient(135deg, #29323c56 0%, #48556367 100%);
   opacity: 0.73;
 }
 .welcome-area .header-bg {
