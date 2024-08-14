@@ -527,7 +527,7 @@ header
 }
 .header-area .main-nav .logo {
   float: left;
-  margin-top: 32px;
+  margin-top: 10px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -558,9 +558,9 @@ header
 }
 .header-area .main-nav .nav li a {
   display: block;
-  font-weight: 600;
-  font-size: 14px;
-  color: #000;
+  font-weight: 800;
+  font-size: 18px;
+  color: #ffffff;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -829,7 +829,7 @@ header
   box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
 }
 .header-area.header-sticky .logo {
-  margin-top: 26px;
+  margin-top: 10px;
 }
 .header-area.header-sticky .nav {
   margin-top: 21px !important;
@@ -862,10 +862,10 @@ header
   color: #fff;
 }
 .header-area.header-sticky .header-buttons li .btn-nav-primary {
-  background-image: linear-gradient(135deg, #29323C 0%, #485563 100%);
+  background-image: linear-gradient(135deg, #42c82e 0%, #61d22f 100%);
   color: #fff;
   margin-top: 24px;
-  border: 1px solid #333D49;
+  border: 1px solid #42c82e;
   box-shadow: 0 4px 5px 0 rgba(51, 61, 73, 0.24);
 }
 .header-area.header-sticky .header-buttons li .btn-nav-primary:hover {
@@ -1083,8 +1083,8 @@ welcome
   z-index: 4;
 }
 .welcome-area .header-text h1 {
-  font-weight: 400;
-  font-size: 28px;
+  font-weight: 900;
+  font-size: 29px;
   color: #1E3056;
   line-height: 46px;
   letter-spacing: 0.93px;
@@ -1094,9 +1094,9 @@ welcome
   color: #333D49;
 }
 .welcome-area .header-text p {
-  font-weight: 400;
+  font-weight: 800;
   font-size: 16px;
-  color: #697BA2;
+  color: #ffffff;
   line-height: 28px;
   letter-spacing: 1px;
   margin-bottom: 40px;
@@ -2422,7 +2422,7 @@ faq
   transition: all 0.3s ease 0s;
 }
 .accordion .accordion-item .accordion-header:hover {
-  background: #EDEDED;
+  background: #6fd72f;
   padding-left: 10px;
 }
 .accordion .accordion-item .accordion-header .accordion-button {
@@ -2454,7 +2454,7 @@ faq
   border-radius: 100px;
   border-top-right-radius: 0;
   text-align: center;
-  background: #333D49;
+  background: #6fd72f;
   color: #fff;
   font-size: 12px;
   margin-right: 20px;
