@@ -123,7 +123,7 @@
 						"elementType": "all",
 						"stylers": [
 							{
-								"visibility": "off"
+								"visibility": "on"
 							}
 						]
 					},
@@ -133,6 +133,9 @@
 						"stylers": [
 							{
 								"saturation": -100
+							},
+							{
+								"color": "#7bda56"
 							},
 							{
 								"lightness": 45
@@ -153,7 +156,7 @@
 						"elementType": "labels.icon",
 						"stylers": [
 							{
-								"visibility": "off"
+								"visibility": "on"
 							}
 						]
 					},
@@ -171,7 +174,7 @@
 						"elementType": "all",
 						"stylers": [
 							{
-								"color": "#ededed"
+								"color": "#aeceff"
 							},
 							{
 								"visibility": "on"
