@@ -89,6 +89,11 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+bold {
+  color: #3875ac;
+  font-weight: 900;
+}
+
 a {
   text-decoration: none !important;
 }
@@ -335,6 +340,7 @@ body {
 .btn-white-line:hover {
   background: #EDEDED;
 }
+
 
 .btn-home {
   width: 100%;
@@ -2452,7 +2458,7 @@ faq
 }
 .accordion .accordion-item .accordion-header .accordion-button .badge {
   display: inline-block;
-  width: 20px;
+  width: 26px;
   height: 20px;
   line-height: 14px;
   float: left;
