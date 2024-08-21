@@ -20,6 +20,7 @@
 
 	<!-- Custom CSS -->
 	<link href="assets/css/dark.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="./assets/css/silverBox.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
@@ -30,10 +31,10 @@
 
 	<!-- ***** Preloader Start ***** -->
 	<div id="preloader">
-		<div id="loader" class="spinner">
+		<!-- <div id="loader" class="spinner">
 			<div id="shadow"></div>
 			<div id="box"></div>
-		</div>
+		</div> -->
 	</div>
 	<!-- ***** Preloader End ***** -->
 
@@ -58,9 +59,9 @@
 								<a href="#about-us">About Us</a>
 
 							</li>
-							
+
 							<li><a href="services.html">Our Services</a></li>
-							
+
 							<li><a href="faq.html">FAQ</a></li>
 
 						</ul>
@@ -218,7 +219,7 @@
 							India</p>
 						<p>Phone: 9035699161</p>
 						<p><span>E-Mail:</span><a href="mailto:info@e2erecycling.com">info@e2erecycling.com</a></p>
-						
+
 					</div>
 				</div>
 			</div>
@@ -237,6 +238,35 @@
 
 
 	<!-- jQuery -->
+	<script src="assets/js/silverbox.min.js"></script>
+	<script>
+			(function () {
+				// Set a delay of 3 seconds before triggering the modal
+				setTimeout(function () {
+					new silverBox({
+						alertIcon: "info",
+						theme: "light",
+						customIcon: "assets/images/logo.png",
+						closeOnOverlayClick: true,
+						title: {
+							text: "We Are Working On A New Look For e2eRecycling",
+						},
+						centerContent: true,
+						text: "In The Mean Time Here Is The Basic Version",
+						showCloseButton: true,
+						confirmButton: {
+							text: "Close",
+							closeOnClick: true,
+							onClick: () => {
+								window.scrollTo(0, initialScrollTop);
+							}
+						},
+
+					});
+				}, 1000);
+
+			})();
+	</script>
 	<script src="assets/js/jquery-3.6.0.min.js"></script>
 
 	<!-- Bootstrap -->
@@ -253,39 +283,8 @@
 
 	<!-- Global Init -->
 	<script src="assets/js/custom.js"></script>
-	<script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/script.js"></script>
-	<script>
-		// Initialize Swiper
-		const swiper = new Swiper('.swiper', {
-			// Optional parameters
-			direction: 'horizontal',
-			loop: true,
 
-			breakpoints: {
-				640: {
-					slidesPerView: 1,
-				},
-				768: {
-					slidesPerView: 2,
-				},
-				1024: {
-					slidesPerView: 3,
-				},
-			},
 
-			// Pagination
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			},
-
-			// Navigation
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-			},
-		});
-	</script>
 </body>
 
 </html>
