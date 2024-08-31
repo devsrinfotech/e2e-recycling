@@ -182,7 +182,7 @@ body {
 .left-heading .section-title {
   font-weight: 400;
   font-size: 28px;
-  color: #3B566E;
+  color: #51d902;
   letter-spacing: 1.75px;
   height: 45px;
   margin-bottom: 30px;
@@ -1102,7 +1102,7 @@ welcome
 .welcome-area .header-text p {
   font-weight: 800;
   font-size: 16px;
-  color: #ffffff;
+  color: #000;
   line-height: 28px;
   letter-spacing: 1px;
   margin-bottom: 40px;
@@ -1314,8 +1314,8 @@ features
   color: #fff;
 }
 .features-small-item .icon {
-  width: 67px;
-  height: 67px;
+  width: 120px;
+  height: 120px;
   line-height: 70px;
   margin: auto;
   position: relative;
@@ -1328,8 +1328,8 @@ features
   color: #333D49;
 }
 .icon img{
-  width: 50px;
-  height: 50px;
+  width: 120px;
+  height: 120px;
 }
 
 .features-small-item .features-title {
@@ -1578,6 +1578,17 @@ team
   text-align: center;
   overflow: hidden;
 }
+
+.check-points{
+  display: flex; 
+  align-items: center;
+}
+.icons{
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+}
+
 .team-item .team-content .team-info {
   background-image: linear-gradient(135deg, #29323C 0%, #485563 100%);
   margin-top: 70px;
