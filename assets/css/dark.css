@@ -247,7 +247,7 @@ body {
 .left-text {
   font-weight: 400;
   font-size: 16px;
-  color: #6F8BA4;
+  color: #000;
   line-height: 28px;
   letter-spacing: 1px;
 }
@@ -952,7 +952,7 @@ header
     padding: 0px;
   }
   .header-area .logo {
-    margin-top: 22px !important;
+    /* margin-top: 22px !important; */
     margin-left: 30px;
   }
   .header-area .light-logo {
@@ -1454,11 +1454,32 @@ parallax
   width: 140%;
   height: 140%;
   opacity: 0.78;
-  background-image: linear-gradient(127deg, #29323C 0%, #485563 91%);
+  /* background-image: linear-gradient(127deg, #29323C 0%, #485563 91%); */
   z-index: 2;
   top: -20%;
   left: -20%;
 }
+
+.hero-icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero-icons img{
+  width: 200px;
+  height: 200px;
+}
+
+.hero-icons h4{
+  text-align: center;
+  color:#39c02c;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
 .parallax-counter .parallax-content {
   position: absolute;
   z-index: 3;
@@ -1535,6 +1556,36 @@ parallax
   }
   .parallax-counter .parallax-content .count-item strong {
     margin-top: 0px;
+  }
+}
+
+.vertical-img {
+  display: block;
+}
+.horizontal-img {
+  display: none;
+}
+
+/* Media Query for Mobile Screens - Portrait Mode */
+@media only screen and (max-width: 768px) {
+  .vertical-img {
+      display: none !important;
+      
+  }
+
+  .horizontal-img {
+      display: block !important;
+      padding-left: 50px;
+      padding-right:50px;  }
+}
+
+@media only screen and (min-width: 768px) {
+  .vertical-img {
+      display: block !important;
+  }
+
+  .horizontal-img {
+      display: none !important;
   }
 }
 /* 
