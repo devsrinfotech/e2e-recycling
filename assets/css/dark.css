@@ -1107,6 +1107,7 @@ welcome
   letter-spacing: 1px;
   margin-bottom: 40px;
   padding-bottom: 30px;
+  padding-right: 20px;
   position: relative;
 }
 .welcome-area .header-text p:before {
