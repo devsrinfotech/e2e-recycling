@@ -114,7 +114,7 @@
 				// Home Parallax
 				if($('#parallax-text').length){
 					$('#parallax-text').parallax({
-						imageSrc: 'assets/images/photos/contact-us.PNG',
+						imageSrc: 'assets/images/photos/contact-us.png',
 						zIndex: '1'
 					});
 				}
@@ -122,7 +122,7 @@
 				// Home Parallax Counter
 				if($('#counter').length){
 					$('#counter').parallax({
-						imageSrc: 'assets/images/photos/contact-us.PNG',
+						imageSrc: 'assets/images/photos/contact-us.png',
 						zIndex: '1'
 					});
 				}
