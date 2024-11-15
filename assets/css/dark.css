@@ -90,7 +90,7 @@ html, body {
 }
 
 bold {
-  color: #3875ac;
+  color: #198754;
   font-weight: 900;
 }
 
@@ -1308,7 +1308,7 @@ features
 .features-small-item.active .features-title, .features-small-item:hover .features-title {
   color: #ffffff;
 }
-.features-small-item.active p, .features-small-item:hover p {
+.features-small-item.active p, .features-small-item:hover p, .features-small-item:hover bold {
   color: #FFF7F5;
 }
 .features-small-item.active a span, .features-small-item.active a i, .features-small-item:hover a span, .features-small-item:hover a i {
@@ -2294,6 +2294,28 @@ pages
   color: #fff;
   text-align: center;
 }
+
+.page .cover .page-top h2 {
+  font-weight: 400;
+  font-size: 36px;
+  height: 50px;
+  line-height: 46px;
+  letter-spacing: 1.4px;
+  color: #fff;
+  text-align: center;
+}
+
+.page .cover .page-top p {
+  font-weight: 400;
+  font-size:18px;
+  height: 50px;
+  line-height: 46px;
+  letter-spacing: 1.4px;
+  color: #fff;
+  text-align: center;
+}
+
+
 .page .cover .page-top h1:before {
   content: "";
   position: absolute;
@@ -2308,6 +2330,49 @@ pages
   -moz-border-radius: 100px;
   border-radius: 100px;
 }
+
+.page .cover .page-top h2:before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  width: 19px;
+  height: 2px;
+  background: #fff;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+}
+
+.page .cover .page-top p:before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  width: 19px;
+  height: 2px;
+  background: #fff;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+}
+
+.column-img{
+  max-width: 40%;
+  padding: 20px;
+}
+
+@media (max-width: 991px) {
+  .column-content {
+    padding: 30px;
+  }
+}
+
+
 .page .cover .page-top .breadcrumb {
   float: none;
   -webkit-border-radius: 0px;
