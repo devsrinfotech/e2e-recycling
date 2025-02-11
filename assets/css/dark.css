@@ -539,6 +539,12 @@ header
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
+
+@media (min-width: 1400px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+      max-width: 1353px !important;
+  }
+}
 .header-area .main-nav .logo img {
   max-width: 60%;
   -webkit-transition: all 0.3s ease 0s;
@@ -549,7 +555,7 @@ header
 .header-area .main-nav .nav {
   float: left;
   margin-top: 27px;
-  margin-left: 80px;
+  margin-left: 10px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -1088,6 +1094,15 @@ welcome
   transform: perspective(1px) translateY(0%);
   z-index: 4;
 }
+
+.custom-list  {
+
+  list-style: disc  !important;
+
+  margin-left: 20px;
+
+}
+
 .welcome-area .header-text h1 {
   font-weight: 900;
   font-size: 29px;
@@ -1852,7 +1867,7 @@ blog
   border-radius: 5px;
   margin-bottom: 25px;
   position: relative;
-  height: 200px;
+  height: 250px;
 }
 .blog-post-thumb .img .date {
   position: absolute;
