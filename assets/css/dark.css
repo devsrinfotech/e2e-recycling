@@ -314,6 +314,16 @@ body {
   color: #fff;
 }
 
+.btn-assessment {
+  width: auto !important;
+  max-width: 100%;
+  height: auto !important;
+  min-height: 44px;
+  padding: 12px 20px;
+  line-height: 20px !important;
+  white-space: normal;
+}
+
 .btn-white-line {
   width: 160px;
   margin: auto;
@@ -663,6 +673,9 @@ header
 }
 .header-area .main-nav .menu-trigger {
   cursor: pointer;
+  padding: 0;
+  border: 0;
+  background: transparent;
   display: block;
   position: absolute;
   top: 23px;
