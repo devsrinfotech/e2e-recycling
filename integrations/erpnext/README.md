@@ -43,7 +43,9 @@ means no CRM record. Localhost intentionally cannot submit using production keys
 ## Discord activation
 
 Saved ERPNext webhook: [HOOK-0004](https://e2e.srinfotech.biz/app/webhook/HOOK-0004).
-It is deliberately **disabled** with a placeholder URL.
+It is **enabled**. The owner entered the private Discord URL directly in ERPNext;
+the URL is not stored in this repository. Delivery was confirmed on 28 October 2026.
+For future setup or rotation:
 
 1. Replace Request URL with your Discord channel's incoming webhook URL.
 2. Keep DocType `e2e Website Leads`, event `after_insert`, method `POST`, structure
@@ -81,10 +83,21 @@ python scripts/audit_site.py
 node scripts/check_brief.cjs
 ```
 
-Unit tests mock Google and Frappe; they do not establish live CAPTCHA or Discord
-delivery. Complete the live submission check after entering the secret and
-publishing the website form. The public endpoint's missing-origin rejection was
-verified as HTTP 403 after server installation.
+Unit tests mock Google and Frappe. Live checks were also completed on 28 October 2026:
+
+- The owner completed reCAPTCHA and submitted the production form. ERPNext saved
+  all seven fields in `e2e-WEB-LEAD-2026-00001` (E2E WEBSITE INTEGRATION TEST).
+- After the owner added the Discord URL, the webhook was enabled. A separate
+  labelled CRM test `e2e-WEB-LEAD-2026-00002` triggered the notification; the owner
+  confirmed receipt in Discord. Webhook Request Log: `c64bd0d764`.
+- ERPNext's webhook preview rendered valid JSON containing all seven form values.
+- Missing-origin requests were rejected with HTTP 403. An invalid CAPTCHA token
+  was rejected with HTTP 400 and the correct website CORS header.
+- Both test records are retained and clearly labelled; neither requests a collection.
+
+Production CAPTCHA registration intentionally excludes localhost. Test the live
+form at `https://e2erecycling.com/contact-us.html`, or use a separate development
+key and isolated server configuration for future localhost tests.
 
 References: [Google server verification](https://developers.google.com/recaptcha/docs/verify),
 [Frappe webhooks](https://docs.frappe.io/framework/user/en/guides/integration/webhooks),
