@@ -24,7 +24,7 @@
 	<script type="application/ld+json">
 	{
 	  "@context": "https://schema.org",
-	  "@type": "RecyclingCenter",
+	  "@type": ["Organization", "RecyclingCenter"],
 	  "name": "e2e Recycling",
 	  "url": "https://e2erecycling.com/",
 	  "logo": "https://e2erecycling.com/assets/images/logo.png",
@@ -42,24 +42,8 @@
 	}
 	</script>
 
-
-	<!-- Favicon -->
 	<link rel="icon" type="image/png" href="assets/images/favicon/favicon.ico" />
 
-	<!-- Bootstrap & Plugins CSS -->
-	<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-	<link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link href="assets/css/magnific-popup.css" rel="stylesheet" type="text/css">
-
-	<!-- Custom CSS -->
-	<link href="assets/css/dark.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="./assets/css/silverBox.min.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-P57BF6R1W2"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
@@ -67,82 +51,55 @@
 		gtag('js', new Date());
 		gtag('config', 'G-P57BF6R1W2');
 	</script>
+<meta name="robots" content="index,follow,max-image-preview:large">
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700&amp;display=swap">
+
+
+
+
+
+<link rel="stylesheet" href="assets/css/site.min.css">
 </head>
 
 <body>
 
-	<!-- ***** Preloader Start ***** -->
-	<div id="preloader">
-		<!-- <div id="loader" class="spinner">
-			<div id="shadow"></div>
-			<div id="box"></div>
-		</div> -->
-	</div>
-	<!-- ***** Preloader End ***** -->
-
-
-	<!-- ***** Header Area Start ***** -->
 	<header class="header-area">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
 					<nav class="main-nav">
-						<!-- ***** Logo Start ***** -->
+
 						<a href="index.html" class="logo">
-							<img src="assets/images/logo.png" alt="e2e recycling" />
+							<img height="108" width="179" src="assets/images/logo.png" alt="e2e recycling" />
 						</a>
-						<!-- ***** Logo End ***** -->
 
-
-						<!-- ***** Menu Start ***** -->
-						<ul class="nav">
-							<li><a href="index.html">Home</a></li>
-							<li>
-								<a href="#about-us">About Us</a>
-
-							</li>
-
-							<li><a href="services.html">Services</a></li>
-							<li><a href="our-process.html">Process</a></li>
-							<li><a href="our-mission.html">Why e2e</a></li>
-							<li><a href="blogs.html">Blogs</a></li>
-							<li><a href="faq.html">FAQ</a></li>
-							<li class="mobile-contact"><a href="contact-us.html">Request an assessment</a></li>
-
-						</ul>
+						<ul class="nav"><li><a href="index.html">Home</a></li><li class="submenu"><a href="index.html#about-us">About Us</a><button type="button" class="submenu-toggle" aria-label="Show about us pages" aria-expanded="false" aria-controls="about-pages"><span class="nav-chevron" aria-hidden="true"></span></button><ul id="about-pages"><li><a href="index.html#about-us">About e2e</a></li><li><a href="our-process.html">Our process</a></li><li><a href="our-mission.html">Why e2e</a></li></ul></li><li class="submenu"><a href="services.html">Services</a><button type="button" class="submenu-toggle" aria-label="Show services pages" aria-expanded="false" aria-controls="service-pages"><span class="nav-chevron" aria-hidden="true"></span></button><ul id="service-pages"><li><a href="services.html">All services</a></li><li><a href="corporate-it-asset-disposal.html">Corporate IT asset disposal</a></li><li><a href="data-erasure-services-india.html">Data erasure & sanitization</a></li><li><a href="server-recycling-india.html">Server & workstation recycling</a></li><li><a href="hard-drive-destruction-services.html">Physical drive destruction</a></li><li><a href="it-disposal-brief.html">Build an enquiry brief</a></li></ul></li><li class="submenu"><a href="locations.html">Coverage</a><button type="button" class="submenu-toggle" aria-label="Show coverage pages" aria-expanded="false" aria-controls="coverage-pages"><span class="nav-chevron" aria-hidden="true"></span></button><ul id="coverage-pages"><li><a href="locations.html">Pan-India collection</a></li><li><a href="e-waste-recycling-bengaluru.html">Bengaluru / Bangalore</a></li><li><a href="e-waste-recycling-chennai.html">Chennai</a></li><li><a href="e-waste-recycling-hyderabad.html">Hyderabad</a></li></ul></li><li class="submenu"><a href="blogs.html">Blogs</a><button type="button" class="submenu-toggle" aria-label="Show blogs pages" aria-expanded="false" aria-controls="blog-pages"><span class="nav-chevron" aria-hidden="true"></span></button><ul id="blog-pages"><li><a href="blogs.html">All blogs</a></li><li><a href="it-recycling-resources.html">IT guides & templates</a></li><li><a href="data-erasure-vs-drive-destruction.html">Erasure vs destruction</a></li><li><a href="corporate-laptop-disposal-checklist.html">Laptop disposal checklist</a></li><li><a href="server-decommissioning-checklist.html">Server decommissioning checklist</a></li><li><a href="data-erasure-certificate-checklist.html">Erasure report checklist</a></li><li><a href="multi-office-e-waste-collection-plan.html">Multi-office collection plan</a></li></ul></li><li><a href="faq.html">FAQ</a></li><li class="mobile-contact"><a href="contact-us.html">Request an assessment</a></li></ul>
 						<button type="button" class="menu-trigger" aria-label="Toggle navigation">
 							<span>Menu</span>
 						</button>
-						<!-- ***** Menu End ***** -->
 
-						<!-- ***** Header Buttons Start ***** -->
 						<ul class="header-buttons">
 
 							<li><a class="btn-nav-primary" href="contact-us.html">Request Assessment</a></li>
 						</ul>
-						<!-- ***** Header Buttons End ***** -->
+
 					</nav>
 				</div>
 			</div>
 		</div>
 	</header>
-	<!-- ***** Header Area End ***** -->
 
-
-	<!-- ***** Welcome Area Start ***** -->
 	<div class="welcome-area" id="welcome">
-		<!-- ***** Header Background Image Start ***** -->
+
 		<div class="right-bg">
-			<img src="assets/images/photos/Artboard 2.png" class="img-fluid float-right" alt="Corporate e-waste recycling and IT asset disposition services">
+			<picture><source media="(min-width: 992px)" srcset="assets/images/photos/Artboard%202.webp"><img loading="lazy" decoding="async" fetchpriority="high" height="1020" width="1920" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="img-fluid float-right" alt="Corporate e-waste recycling and IT asset disposition services"></picture>
 		</div>
-		<!-- ***** Header Background Image End ***** -->
+
 		<div class="header-bg">
-			<!-- <img src="assets/images/header-bg.svg" class="img-fluid" alt=""> -->
+
 		</div>
 
-
-
-		<!-- ***** Header Text Start ***** -->
 		<div class="header-text">
 			<div class="container">
 				<div class="row">
@@ -152,22 +109,20 @@
 						<p>e2e helps IT, procurement, facilities, and compliance teams securely retire equipment across Bengaluru and India. Our KSPCB-registered recycling and ITAD services cover data sanitization, physical drive destruction, collection, logistics, and compliant disposal.</p>
 
 						<a href="contact-us.html" class="btn-primary-line btn-assessment">Request a Corporate E-Waste Assessment</a>
-						<a href="services.html" class="hero-secondary-link">Explore our services <span aria-hidden="true">&#8594;</span></a>
+						<a href="data-erasure-services-india.html" class="hero-secondary-link">Need data wiping only? <span aria-hidden="true">&#8594;</span></a>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- ***** Header Text End ***** -->
-
 
 	</div>
-	<!-- ***** Welcome Area End ***** -->
+
 	<section style="padding-top: 50px;padding-bottom: 50px;">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3 col-md-6 col-sm-12">
 					<div class="hero-icons">
-						<img src="assets/images/icons/E2e_Data Destruct.png" alt="Secure data sanitization and physical drive destruction">
+						<img loading="lazy" decoding="async" height="300" width="300" src="assets/images/icons/E2e_Data Destruct.webp" alt="Secure data sanitization and physical drive destruction">
 						<h4>100% Data Destruction</h4>
 					</div>
 
@@ -175,7 +130,7 @@
 
 				<div class="col-lg-3 col-md-6 col-sm-12">
 					<div class="hero-icons">
-						<img src="assets/images/icons/E2e_Experts Handling.png" alt="Expert corporate e-waste and IT asset disposition handling">
+						<img loading="lazy" decoding="async" height="300" width="300" src="assets/images/icons/E2e_Experts Handling.webp" alt="Expert corporate e-waste and IT asset disposition handling">
 						<h4>Expert ITAD Handling
 						</h4>
 					</div>
@@ -184,7 +139,7 @@
 
 				<div class="col-lg-3 col-md-6 col-sm-12">
 					<div class="hero-icons">
-						<img src="assets/images/icons/Iso -icons_Pickup.png" alt="Scheduled corporate e-waste collection and pickup">
+						<img loading="lazy" decoding="async" height="300" width="300" src="assets/images/icons/Iso -icons_Pickup.webp" alt="Scheduled corporate e-waste collection and pickup">
 						<h4>Scheduled Collections
 						</h4>
 					</div>
@@ -193,7 +148,7 @@
 
 				<div class="col-lg-3 col-md-6 col-sm-12">
 					<div class="hero-icons">
-						<img src="assets/images/icons/Iso -icons_Pan Indian Logis.png" alt="Pan-India corporate e-waste collection and logistics support">
+						<img loading="lazy" decoding="async" height="300" width="300" src="assets/images/icons/Iso -icons_Pan Indian Logis.webp" alt="Pan-India corporate e-waste collection and logistics support">
 						<h4>Pan-India Logistics
 						</h4>
 					</div>
@@ -203,7 +158,7 @@
 
 		</div>
 	</section>
-	<!-- about us section start -->
+
 	<section id="about-us" class="section padding-bottom-80 colored">
 		<div class="container">
 			<div class="row">
@@ -212,7 +167,6 @@
 						<h2 class="section-title">About e2e Corporate Recycling</h2>
 					</div>
 					<div class="left-text">
-
 
 						<p>
 							e2e is a KSPCB-registered recycler supporting corporate IT, procurement, facilities, and compliance teams. With 20 years of e-waste experience and 15 years of Pan-India logistics expertise, we design practical retirement programs around each organisation's equipment, security, and reporting needs.
@@ -225,23 +179,19 @@
 					</div>
 				</div>
 
-				<div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-bottom-fix"
-					data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-					<img src="assets/images/photos/E2E_About us.png" class="img-fluid d-block mx-auto"
+				<div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-bottom-fix">
+					<img loading="lazy" decoding="async" height="1080" width="1920" src="assets/images/photos/E2E_About us.webp" class="img-fluid d-block mx-auto"
 						alt="e2e team supporting corporate e-waste recycling and IT asset disposition">
 				</div>
 			</div>
 		</div>
 	</section>
-	<!-- about us section end -->
 
-	<!-- e-waste problem section start -->
 	<section class="section padding-bottom-80 ">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-bottom-fix"
-					data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-					<img src="assets/images/photos/About Us_E-waste problem in India.png"
+				<div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-bottom-fix">
+					<img loading="lazy" decoding="async" height="1000" width="1096" src="assets/images/photos/About Us_E-waste problem in India.webp"
 						class="img-fluid d-block mx-auto" alt="Corporate e-waste collection and responsible recycling in India">
 				</div>
 
@@ -251,36 +201,27 @@
 					</div>
 					<div class="left-text">
 
-
 						<p>
 							For Indian businesses, retiring laptops, servers, networking equipment, and prototypes requires more than a pickup. A controlled process helps IT and compliance teams protect data, document asset movement, and route equipment through responsible recycling. e2e supports onsite assessments, secure destruction, Pan-India logistics, and compliant disposal, with environmental outcomes as a result of good corporate controls.
 						</p>
-
-
 
 					</div>
 				</div>
 
 			</div>
 			<div class="row" style="justify-content: center;">
-				<div class="col-lg-10 col-md-12 col-sm-12 align-self-center mobile-bottom-fix"
-					data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-					<img src="assets/images/photos/About Us_Benefits - horizontal.png"
+				<div class="col-lg-10 col-md-12 col-sm-12 align-self-center mobile-bottom-fix">
+					<img loading="lazy" decoding="async" height="783" width="1920" src="assets/images/photos/About Us_Benefits - horizontal.webp"
 						class="vertical-img img-fluid d-block mx-auto" alt="Business benefits of secure corporate e-waste recycling and ITAD">
 
-					<img style="padding: 0px;" src="assets/images/photos/About Us_Benefits - Vertical.png"
+					<img loading="lazy" decoding="async" height="1080" width="1349" style="padding: 0px;" src="assets/images/photos/About Us_Benefits - Vertical.webp"
 						class="horizontal-img img-fluid d-block mx-auto" alt="Corporate benefits of secure e-waste recycling and IT asset disposition">
 				</div>
 			</div>
 
-
-
 		</div>
 	</section>
-	<!-- e-waste problem section end -->
 
-
-	<!-- ***** Parallax Start ***** -->
 	<section class="parallax" id="parallax-text">
 		<div class="parallax-content">
 			<div class="container">
@@ -296,26 +237,22 @@
 			</div>
 		</div>
 	</section>
-	<!-- ***** Parallax End ***** -->
 
-
-
-	<!-- ***** Footer Start ***** -->
-	<footer>
+<footer>
 		<div class="container">
 			<div class="row" style="justify-content: space-between;">
 				<div class="col-lg-5 col-md-12 col-sm-12">
-					<img src="assets/images/logo.png" class="logo" alt="e2e Recycling">
+					<img height="108" width="179" src="assets/images/logo.png" class="logo" alt="e2e Recycling">
 					<div class="text">e2e provides B2B corporate e-waste recycling and IT asset disposition for IT, procurement, facilities, and compliance teams, with secure data sanitization, destruction, onsite assessments, and Pan-India collection and logistics.</div>
 				</div>
 				<div class="col-lg-2 col-md-4 col-sm-6 col-6">
 					<h5>Helpful Links</h5>
 					<ul class="footer-nav">
-						<li><a href="#about-us"><i class="fa fa-angle-right"></i><span>About Us</span></a></li>
+						<li><a href="index.html#about-us"><i class="fa fa-angle-right"></i><span>About Us</span></a></li>
 						<li><a href="services.html"><i class="fa fa-angle-right"></i><span>Services</span></a></li>
 						<li><a href="faq.html"><i class="fa fa-angle-right"></i><span>FAQ</span></a></li>
 						<li><a href="blogs.html"><i class="fa fa-angle-right"></i><span>Blogs</span></a></li>
-					</ul>
+					<li><a href="data-erasure-services-india.html"><i class="fa fa-angle-right"></i><span>Data Erasure</span></a></li><li><a href="locations.html"><i class="fa fa-angle-right"></i><span>Coverage</span></a></li><li><a href="it-recycling-resources.html"><i class="fa fa-angle-right"></i><span>IT Resources</span></a></li></ul>
 				</div>
 				<div class="col-lg-2 col-md-4 col-sm-6 col-6">
 					<h5>Support</h5>
@@ -347,55 +284,10 @@
 			</div>
 		</div>
 	</footer>
-	<!-- ***** Footer End ***** -->
 
+	<script defer src="assets/js/custom.js"></script>
 
-
-	<!-- jQuery -->
-	<script src="assets/js/silverbox.min.js"></script>
-	<!-- <script>
-			(function () {
-				// Set a delay of 3 seconds before triggering the modal
-				setTimeout(function () {
-					new silverBox({
-						alertIcon: "info",
-						theme: "light",
-						customIcon: "assets/images/logo.png",
-						closeOnOverlayClick: true,
-						title: {
-							text: "We Are Working On A New Look For e2eRecycling",
-						},
-						centerContent: true,
-						text: "In The Mean Time Here Is The Basic Version",
-						showCloseButton: true,
-						confirmButton: {
-							text: "Close",
-							closeOnClick: true,
-						},
-
-					});
-				}, 1000);
-
-			})();
-	</script> -->
-	<script src="assets/js/jquery-3.6.0.min.js"></script>
-
-	<!-- Bootstrap -->
-	<script src="assets/js/popper.js"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
-
-	<!-- Plugins -->
-	<script src="assets/js/scrollreveal.min.js"></script>
-	<script src="assets/js/parallax.min.js"></script>
-	<script src="assets/js/waypoints.min.js"></script>
-	<script src="assets/js/jquery.counterup.min.js"></script>
-	<script src="assets/js/jquery.magnific-popup.min.js"></script>
-	<script src="assets/js/imgfix.min.js"></script>
-
-	<!-- Global Init -->
-	<script src="assets/js/custom.js"></script>
-
-
+<script defer src="assets/js/growth.js"></script>
 </body>
 
 </html>

@@ -6,7 +6,9 @@ e2e Recycling is a KSPCB-registered B2B e-waste recycling and ITAD provider base
 
 - Corporate e-waste collection, recycling, and logistics across India.
 - Bengaluru, Chennai, and Hyderabad coverage; same-day pickup is possible only in Bengaluru, subject to location, volume, and scheduling.
-- Data sanitization, 100% data destruction, and physical drive destruction.
+- Data erasure and sanitization for retained, redeployed or retired corporate equipment.
+- Erasure tools used include Blancco, TruWipe and BitRaser. Product, version, media support, method and reporting are agreed per project.
+- Physical drive destruction for media that will not return to use.
 - Prototype destruction and onsite assessments.
 - Reports, certificates, and compliance support.
 - 20 years of e-waste experience and 15 years of Pan-India logistics expertise.
@@ -26,3 +28,28 @@ e2e Recycling is a KSPCB-registered B2B e-waste recycling and ITAD provider base
 - [FAQ](https://e2erecycling.com/faq.html)
 - [Corporate assessment contact](https://e2erecycling.com/contact-us.html)
 - [Blogs](https://e2erecycling.com/blogs.html)
+
+## Corporate service details
+
+- [Corporate IT asset disposal](https://e2erecycling.com/corporate-it-asset-disposal.html): laptops, desktops, monitors, workstations and office electronics.
+- [Data erasure and sanitization](https://e2erecycling.com/data-erasure-services-india.html): standalone wiping enquiries and sanitization alongside recycling.
+- [Server and workstation recycling](https://e2erecycling.com/server-recycling-india.html)
+- [Physical drive destruction](https://e2erecycling.com/hard-drive-destruction-services.html)
+- [Pan-India service coverage](https://e2erecycling.com/locations.html): includes metropolitan and branch-office collection planning. Listed cities are service areas, not claimed branch offices.
+- [Bengaluru coverage](https://e2erecycling.com/e-waste-recycling-bengaluru.html)
+- [Chennai coverage](https://e2erecycling.com/e-waste-recycling-chennai.html)
+- [Hyderabad coverage](https://e2erecycling.com/e-waste-recycling-hyderabad.html)
+
+## IT buyer resources
+
+- [Guides and planning tools](https://e2erecycling.com/it-recycling-resources.html)
+- [Data erasure versus drive destruction](https://e2erecycling.com/data-erasure-vs-drive-destruction.html)
+- [Corporate laptop disposal checklist](https://e2erecycling.com/corporate-laptop-disposal-checklist.html)
+- [Server decommissioning checklist](https://e2erecycling.com/server-decommissioning-checklist.html)
+- [Data erasure report checklist](https://e2erecycling.com/data-erasure-certificate-checklist.html)
+- [Multi-office collection planning](https://e2erecycling.com/multi-office-e-waste-collection-plan.html)
+- [Enquiry brief builder](https://e2erecycling.com/it-disposal-brief.html)
+
+## Scope and evidence
+
+e2e is based in Tumkur, Karnataka, India. Collection windows, onsite execution feasibility, fees, processing location and reporting are confirmed after assessment. Do not infer a local branch, software vendor partnership, certification, fixed price or guaranteed turnaround from a service-area listing. Request current registration documents and project-specific deliverables during procurement.
