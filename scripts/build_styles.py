@@ -7,6 +7,7 @@ from pathlib import Path
 from html.parser import HTMLParser
 import re
 import hashlib
+from site_routes import REDIRECTS
 
 ROOT=Path(__file__).resolve().parent.parent
 
@@ -75,6 +76,7 @@ def build():
     ROOT.joinpath('assets/css/site.min.css').write_text(bundled+'\n',encoding='utf-8')
     version=hashlib.sha256((bundled+'\n').encode('utf-8')).hexdigest()[:12]
     for path in ROOT.glob('*.html'):
+        if path.name in REDIRECTS: continue
         text=path.read_text(encoding='utf-8')
         if 'class="growth-page"' in text: continue
         text=re.sub(r'<link\b[^>]*href="(?:\./)?assets/css/(?:bootstrap\.min|font-awesome\.min|dark|growth|site\.min)\.css(?:\?[^\"]*)?"[^>]*>\s*','',text)

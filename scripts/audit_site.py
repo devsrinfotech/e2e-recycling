@@ -6,6 +6,7 @@ from collections import Counter
 import json
 import re
 import xml.etree.ElementTree as ET
+from site_routes import REDIRECTS
 
 ROOT = Path(__file__).resolve().parent.parent
 BASE = 'https://e2erecycling.com/'
@@ -51,6 +52,18 @@ def audit():
     seen_titles={}; seen_desc={}
     for path,doc in pages.items():
         name=path.name
+        if name in REDIRECTS:
+            target=REDIRECTS[name]
+            source=path.read_text(encoding='utf-8')
+            if f'http-equiv="refresh" content="0; url={target}"' not in source or target not in doc.links:
+                errors.append(f'{name}: missing compatibility redirect')
+            if doc.canonical!=[BASE+target.split('#')[0]] or doc.metas.get('robots')!='noindex,follow':
+                errors.append(f'{name}: incorrect redirect indexing metadata')
+            destination=local_target(target,path)
+            if not destination or destination[0] not in pages or destination[1] not in pages[destination[0]].ids:
+                errors.append(f'{name}: broken redirect destination')
+            if '<form' in source: errors.append(f'{name}: retired form is still present')
+            continue
         if doc.h1!=1: errors.append(f'{name}: {doc.h1} H1 elements')
         if len(doc.titles)!=1: errors.append(f'{name}: title count {len(doc.titles)}')
         title=doc.titles[0] if doc.titles else ''
@@ -87,7 +100,7 @@ def audit():
             if target and not target[0].is_file(): errors.append(f'{css.name}: missing CSS asset {value}')
     sitemap=ET.parse(ROOT/'sitemap.xml')
     urls=[e.text for e in sitemap.findall('.//{*}loc')]
-    expected={BASE if p.name=='index.html' else BASE+p.name for p in pages}
+    expected={BASE if p.name=='index.html' else BASE+p.name for p in pages if p.name not in REDIRECTS}
     if set(urls)!=expected or len(urls)!=len(expected): errors.append('Sitemap does not exactly match live pages')
     visited=set(); todo=[ROOT.joinpath('index.html').resolve()]
     while todo:
@@ -97,7 +110,8 @@ def audit():
         for href in pages[path].links:
             target=local_target(href,path)
             if target and target[0] in pages and target[0] not in visited: todo.append(target[0])
-    for orphan in pages.keys()-visited: errors.append(f'Orphan page: {orphan.name}')
+    for orphan in pages.keys()-visited:
+        if orphan.name not in REDIRECTS: errors.append(f'Orphan page: {orphan.name}')
     print(f'Audited {len(pages)} HTML pages; {len(urls)} sitemap URLs; {len(visited)} reachable from homepage.')
     for issue in errors: print('ERROR:',issue)
     for issue in warnings: print('WARN:',issue)

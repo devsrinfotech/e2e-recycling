@@ -24,7 +24,7 @@ The final mobile LCP trace is 1,744 ms faster than the preceding mobile trace un
 - The new data-erasure page was visually inspected in desktop Chrome and checked at a 390 px mobile viewport with no page overflow.
 - Home and FAQ mobile layouts report no horizontal overflow. The mobile navigation opens and updates aria-expanded. The FAQ opens its answer and updates its expanded state using native JavaScript.
 - The enquiry tool generated an editable brief containing selected cities, asset quantities, standalone erasure intent and TruWipe preference. The email action prepares a message to info@e2erecycling.com. The final implementation keeps the body out of the anchor URL so automatic click reporting cannot read it from that URL. No email was sent.
-- The brief_prepared event contains only page_path; form contents are not included.
+- The former brief_prepared event was retired when the enquiry forms were merged. The contact form sends generate_lead only after CRM confirmation, without form contents.
 - The home and data-erasure page consoles had no error/warning messages during the inspected loads.
 - The mobile home hero selects the tiny inline fallback and does not request the desktop illustration.
 - JavaScript syntax and Git whitespace checks pass.

@@ -8,12 +8,13 @@ from PIL import Image, ImageOps
 import xml.etree.ElementTree as ET
 from build_growth import PAGES, DATE, BASE, card
 from site_theme import apply_shell
+from site_routes import REDIRECTS
 
 ROOT = Path(__file__).resolve().parent.parent
 
 def discovery():
     entries = [next(p for p in PAGES if p['slug']==slug) for slug in ('corporate-it-asset-disposal','data-erasure-services-india','server-recycling-india','hard-drive-destruction-services')]
-    return '<section class="growth-discovery" aria-labelledby="growth-services"><div class="growth-container"><h2 id="growth-services">Equipment retirement and data protection for your IT team</h2><p>Choose the service for your equipment, then plan the inventory, data treatment and collection.</p><div class="growth-grid">'+''.join(card(p) for p in entries)+'</div><nav aria-label="IT planning resources"><a href="locations.html">Pan-India coverage</a><a href="e-waste-recycling-bengaluru.html">Bengaluru</a><a href="e-waste-recycling-chennai.html">Chennai</a><a href="e-waste-recycling-hyderabad.html">Hyderabad</a><a href="it-recycling-resources.html">IT guides and templates</a><a href="it-disposal-brief.html">Build an enquiry brief</a></nav></div></section>'
+    return '<section class="growth-discovery" aria-labelledby="growth-services"><div class="growth-container"><h2 id="growth-services">Equipment retirement and data protection for your IT team</h2><p>Choose the service for your equipment, then plan the inventory, data treatment and collection.</p><div class="growth-grid">'+''.join(card(p) for p in entries)+'</div><nav aria-label="IT planning resources"><a href="locations.html">Pan-India coverage</a><a href="e-waste-recycling-bengaluru.html">Bengaluru</a><a href="e-waste-recycling-chennai.html">Chennai</a><a href="e-waste-recycling-hyderabad.html">Hyderabad</a><a href="it-recycling-resources.html">IT guides and templates</a><a href="contact-us.html#corporate-contact-form">Request an assessment</a></nav></div></section>'
 
 def optimise_images():
     mapping = {}
@@ -42,7 +43,7 @@ def optimise_html(path, mapping):
     text = re.sub(r'<!--.*?-->', '', text, flags=re.S)
     text = re.sub(r'<div\s+id="preloader"[^>]*>\s*</div>', '', text)
     # Plugin functionality is replaced by native navigation, FAQs and CSS images.
-    text = re.sub(r'<script\b[^>]*\bsrc=["\'](?:assets/js/(?!custom\.js|growth\.js|brief\.js|contact\.js)[^"\']+|https://cdn\.jsdelivr\.net/[^"\']+)["\'][^>]*>\s*</script>', '', text, flags=re.I)
+    text = re.sub(r'<script\b[^>]*\bsrc=["\'](?:assets/js/(?!custom\.js|growth\.js|contact\.js)[^"\']+|https://cdn\.jsdelivr\.net/[^"\']+)["\'][^>]*>\s*</script>', '', text, flags=re.I)
     text = re.sub(r'<link\b[^>]*(?:magnific-popup\.css|silverBox\.min\.css|cdn\.jsdelivr\.net)[^>]*>', '', text, flags=re.I)
     text = re.sub(r'\s+data-scroll-reveal="[^"]*"', '', text)
     text = re.sub(r'"@type"\s*:\s*"RecyclingCenter"', '"@type": ["Organization", "RecyclingCenter"]', text)
@@ -121,8 +122,9 @@ def optimise_html(path, mapping):
 if __name__ == '__main__':
     mapping, before, after = optimise_images()
     for path in ROOT.glob('*.html'):
+        if path.name in REDIRECTS: continue
         optimise_html(path,mapping)
-    urls = [BASE] + [BASE+p.name for p in sorted(ROOT.glob('*.html')) if p.name!='index.html']
+    urls = [BASE] + [BASE+p.name for p in sorted(ROOT.glob('*.html')) if p.name!='index.html' and p.name not in REDIRECTS]
     ROOT.joinpath('sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join(f'  <url><loc>{u}</loc><lastmod>{DATE}</lastmod></url>\n' for u in urls)+'</urlset>\n',encoding='utf-8')
     ROOT.joinpath('docs/PERFORMANCE-ASSETS.json').write_text(json.dumps({'source_image_bytes':before,'optimized_image_bytes':after,'savings_percent':round((1-after/before)*100,1),'images':mapping},indent=2),encoding='utf-8')
     print(f'Optimized {len(mapping)} images: {before:,} -> {after:,} bytes ({(1-after/before)*100:.1f}% smaller). Updated {len(urls)} sitemap entries.')

@@ -20,7 +20,7 @@ def article_image(p):
 
 def wrap_page(html,p):
     head=html.split('<body',1)[0].replace('assets/css/growth.css','assets/css/site.min.css')
-    head=re.sub(r'<script defer src="assets/js/(?:growth|brief)\.js"></script>','',head)
+    head=re.sub(r'<script defer src="assets/js/growth\.js"></script>','',head)
     content=html.split('<div class="growth-container growth-content">',1)[1].split('</main>',1)[0].removesuffix('</div>')
     article=p['kind']=='article'
     if article:
@@ -31,8 +31,8 @@ def wrap_page(html,p):
     crumb='<li><a href="blogs.html">Blogs</a></li>' if article else '<li><a href="services.html">Services</a></li>'
     body=f'''<body class="content-page"><a class="skip-link" href="#main-content">Skip to content</a>{HEADER}
 <main class="page" id="main-content"><div class="cover" data-image="assets/images/photos/{banner}"><div class="page-top"><div class="container"><div class="row"><div class="col-lg-12"><h1>{title}</h1></div><div class="col-lg-12"><ol class="breadcrumb"><li><a href="index.html">Home</a></li>{crumb}</ol></div></div></div></div></div>
-<div class="page-bottom"><div class="container"><div class="row justify-content-center"><div class="col-lg-10 col-md-12"><div class="{'blog-post-thumb big' if article else 'service-detail'}">{image}<div class="theme-content"><p>{escape(p['intro'])}</p><div class="growth-actions"><a class="btn-primary-line btn-assessment" href="{'#brief-heading' if p['kind']=='tool' else 'it-disposal-brief.html'}">{'Start your brief' if p['kind']=='tool' else 'Request an assessment'}</a></div>{content}</div></div></div></div></div></div></main>{FOOTER}<script defer src="assets/js/custom.js"></script><script defer src="assets/js/growth.js"></script>{'<script defer src="assets/js/brief.js"></script>' if p['kind']=='tool' else ''}</body></html>'''
-    # The original button styles are shared with the enquiry tool and all CTAs.
+<div class="page-bottom"><div class="container"><div class="row justify-content-center"><div class="col-lg-10 col-md-12"><div class="{'blog-post-thumb big' if article else 'service-detail'}">{image}<div class="theme-content"><p>{escape(p['intro'])}</p><div class="growth-actions"><a class="btn-primary-line btn-assessment" href="contact-us.html#corporate-contact-form">Request an assessment</a></div>{content}</div></div></div></div></div></div></main>{FOOTER}<script defer src="assets/js/custom.js"></script><script defer src="assets/js/growth.js"></script></body></html>'''
+    # The original button styles are shared across enquiry links and all CTAs.
     body=body.replace('class="growth-button secondary"','class="btn-primary-line btn-assessment"').replace('class="growth-button"','class="btn-primary-line btn-assessment"')
     if article:
         body=body.replace('class="col-lg-10 col-md-12"','class="col-lg-10 col-md-12 blog-list"')
@@ -46,7 +46,7 @@ def apply_shell(text, name, pages):
     text=re.sub(r'<section id="it-buyer-guides".*?</section>','',text,flags=re.S)
     if name=='services.html' and 'id="service-directory"' not in text:
         cards=''.join(f'<div class="col-lg-6 col-md-6"><a class="features-small-item" href="{p["slug"]}.html"><h2 class="features-title">{escape(p["h1"])}</h2><p>{escape(p["description"])}</p><span>View service →</span></a></div>' for p in pages if p['kind']=='service')
-        directory='<section id="service-directory" class="container"><div class="left-heading"><h2 class="section-title">Explore our corporate services</h2></div><div class="row">'+cards+'</div><p class="pb-40"><a href="locations.html">View collection coverage</a> · <a href="it-recycling-resources.html">IT guides and templates</a> · <a href="it-disposal-brief.html">Build an enquiry brief</a></p></section>'
+        directory='<section id="service-directory" class="container"><div class="left-heading"><h2 class="section-title">Explore our corporate services</h2></div><div class="row">'+cards+'</div><p class="pb-40"><a href="locations.html">View collection coverage</a> · <a href="it-recycling-resources.html">IT guides and templates</a> · <a href="contact-us.html#corporate-contact-form">Request an assessment</a></p></section>'
         text=text.replace('<div class="page-bottom">','<div class="page-bottom">'+directory,1)
     # Old articles were saved with plugin-generated nested image wrappers.
     text=re.sub(r'<div class="img imgfix_top_container"[^>]*>\s*<div[^>]*>\s*(<img\b[^>]*>)\s*</div>\s*</div>',lambda m:'<div class="img">'+re.sub(r'\s+style="[^"]*"','',m[1])+'</div>',text,flags=re.S)

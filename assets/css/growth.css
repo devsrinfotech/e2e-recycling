@@ -29,19 +29,13 @@
 .theme-content details p { margin:16px 0 0; }
 .growth-cta { padding:30px; margin-top:40px; background:#F4F8FB; border-radius:16px; }
 .article-meta { font-size:14px; }
-.brief-fields { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:24px; }
-.brief-tool label { display:block; color:#173d2c; font-weight:600; }
-.brief-tool input, .brief-tool textarea, .brief-tool select { display:block; width:100%; font:inherit; color:#3B566E; padding:14px; border:1px solid #bccfc1; border-radius:5px; margin-top:8px; background:#fff; }
-.brief-tool textarea { min-height:100px; resize:vertical; }
-#brief-result { margin-top:30px; }
-#brief-status { margin-top:16px; }
 .blog-post-thumb.big>.img { height:auto !important; }
 .blog-post-thumb.big>.img>img { display:block; width:100%; height:auto !important; object-fit:contain; }
 .blog-list .blog-post-thumb>.img { height:auto; aspect-ratio:736/400; }
 .blog-list .blog-post-thumb>.img>img { display:block; width:100%; height:100%; object-fit:cover; }
 .content-page .page .cover .page-top h1 { max-width:1000px; margin-left:auto; margin-right:auto; height:auto; }
 #new-it-articles { padding-bottom:70px; }
-@media(max-width:700px) { .brief-fields { grid-template-columns:1fr; } .theme-content h2 { font-size:24px; } .growth-cta { padding:24px; } }
+@media(max-width:700px) { .theme-content h2 { font-size:24px; } .growth-cta { padding:24px; } }
 
 /* Original dropdown treatment, with explicit keyboard/touch controls. */
 .header-area .main-nav .nav li.submenu { padding-right:8px; display:flex; align-items:center; }
@@ -123,3 +117,14 @@
 .contact-form .contact-status:empty { display:none; }
 .contact-form .contact-status[data-error="true"] { color:#a12c24; }
 .contact-form button[type="submit"]:disabled { opacity:.65; cursor:wait; }
+.contact-form .project-details { scroll-margin-top:120px; margin:0 0 24px; border:1px solid #d8e5dc; border-radius:12px; background:#f6faf7; }
+.contact-form .project-details summary { padding:18px 22px; color:#176f3d; font-size:18px; font-weight:700; cursor:pointer; }
+.contact-form .project-details summary span { font-size:14px; font-weight:400; white-space:nowrap; }
+.contact-form .project-details summary:focus-visible { outline:2px solid #176f3d; outline-offset:3px; border-radius:12px; }
+.contact-form .project-details p { padding:0 22px; font-size:15px; line-height:1.7; margin:0 0 20px; }
+.contact-form .project-fields { padding:0 22px; }
+.contact-form .project-fields select { display:block; width:100%; min-height:50px; margin:0 0 20px; padding:12px; border:1px solid #c8d8cd; border-radius:5px; color:#36536a; background:#fff; font:inherit; }
+.contact-form .project-fields textarea { min-height:120px; }
+.contact-form .inventory-help a { color:#176f3d; text-decoration:underline; text-underline-offset:3px; }
+
+#corporate-contact-form { scroll-margin-top:120px; }

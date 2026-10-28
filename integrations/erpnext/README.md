@@ -63,7 +63,13 @@ from lead acceptance. A Discord delivery failure does not mean the CRM lead was 
 ## Form behaviour and limits
 
 - Required fields: contact name (120), company (140), email (140), phone (40),
-  locations (140), assets (1,000), requirement details (2,000 characters).
+  locations (140), assets (1,000), requirement summary (1,000 characters).
+- Optional project section: main service, data handling preference, processing
+  location, and timing/access/reporting (500 characters). The browser adds these
+  answers to `requirement_details` within its existing 2,000-character server and
+  Discord limit; it never sends extra unsupported API fields or truncates answers.
+- The retired `it-disposal-brief.html` URL redirects to this single form. The
+  inventory CSV is still available as a separate planning resource.
 - Five endpoint attempts per IP per ten minutes; server also checks origin,
   input types, length, email/phone format, plain text and a honeypot.
 - CAPTCHA loads near the form or when it receives focus. Submission does not
@@ -80,7 +86,6 @@ from lead acceptance. A Discord delivery failure does not mean the CRM lead was 
 python integrations/erpnext/test_website_leads.py
 node scripts/check_contact.cjs
 python scripts/audit_site.py
-node scripts/check_brief.cjs
 ```
 
 Unit tests mock Google and Frappe. Live checks were also completed on 28 October 2026:

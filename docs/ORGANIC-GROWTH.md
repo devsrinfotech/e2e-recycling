@@ -20,8 +20,8 @@ These are qualitative intent groups, not invented search-volume or ranking estim
 | Physical HDD/SSD destruction; failed media disposal | hard-drive-destruction-services.html | Agree media list and physical process |
 | Corporate recycler Bengaluru/Bangalore, Chennai, Hyderabad | Three e-waste-recycling-{city}.html pages | City-specific collection planning |
 | Corporate collection Mumbai, Pune, Delhi NCR, Kolkata, Ahmedabad and other metros | locations.html | Submit a site-by-site national scope |
-| Wipe vs destroy, laptop disposal checklist, server decommissioning, erasure report, national collections | Five new articles, linked from blogs.html and it-recycling-resources.html | Relevant service or enquiry brief |
-| Internal planning and vendor scoping | it-disposal-brief.html and blank asset inventory CSV | Copy/download a brief or open an email |
+| Wipe vs destroy, laptop disposal checklist, server decommissioning, erasure report, national collections | Five new articles, linked from blogs.html and it-recycling-resources.html | Relevant service or corporate enquiry form |
+| Internal planning and vendor scoping | contact-us.html and blank asset inventory CSV | Submit one CRM enquiry with optional project details |
 
 The national page is the coverage hub. Three priority-city pages address different planning needs. Avoid multiplying near-identical service/city combinations; expand only when there is real local evidence and useful unique information. All areas are explicitly collection coverage, with the real Tumkur location retained.
 
@@ -32,14 +32,14 @@ The national page is the coverage hub. Three priority-city pages address differe
 - [x] Clear vendor naming and source links; current NIST publication reference without claiming NIST certification.
 - [x] Visible questions and answers covering reuse, erasure failures, onsite constraints, reporting and collection.
 - [x] WebPage, Service, Article and BreadcrumbList data on appropriate new pages, with a consistent business identity. City pages describe City service areas and the actual Tumkur business address.
-- [x] Unique titles/descriptions, canonical and sharing metadata, one H1, crawlable links and sitemap inclusion for all 31 pages.
+- [x] Unique titles/descriptions, canonical and sharing metadata, one H1, crawlable links and sitemap inclusion for 30 content pages; the retired brief URL redirects to the contact form.
 - [x] Updated llms.txt as a readable source index. It is supplementary; no special AI file, FAQ schema or markup guarantees indexing, ranking, rich results or AI citations.
 - [x] Existing blog bodies retained; discovery, duplicate headings, navigation, metadata and image delivery improved.
 - [x] Native mobile navigation and FAQ interaction; links and answers remain in server-delivered HTML.
 
 ## Lead capture and measurement
 
-The approved contact destination remains mailto:info@e2erecycling.com. The brief tool generates an editable summary locally and provides copy, text download and email actions. It does not submit to a server. A long brief uses a subject-only email link plus copy/attachment guidance rather than silently truncating the scope.
+The unified contact form submits to ERPNext with server-side reCAPTCHA verification and an enabled Discord notification. Optional project requirements cover the service, erasure preference, processing location, timing, access and reporting. These are included in the existing requirement details field and Discord description. The former brief URL redirects to this form; the inventory CSV remains a separate download. Email and phone remain fallback contact methods.
 
 Existing GA4 property: G-P57BF6R1W2. The shared script tracks:
 
@@ -47,7 +47,7 @@ Existing GA4 property: G-P57BF6R1W2. The shared script tracks:
 |---|---|---|
 | contact_intent | Click on email or phone link | A click is not a received enquiry |
 | resource_download | Click on the inventory template | A click is not a qualified lead |
-| brief_prepared | Brief generated | Form contents and company details are not sent |
+| generate_lead | CRM confirms a successful form submission | No form contents or company details are sent |
 
 Use an internal enquiry register to record received email/call, source where known, service, city, equipment count, qualification, quote and won job. Do not label contact clicks as confirmed leads. No form contents, drive serials, email addresses or company names are included in these analytics events. Do not put personal data in page URLs.
 
@@ -70,8 +70,8 @@ python scripts/build_styles.py
 python scripts/audit_site.py
 node --check assets/js/custom.js
 node --check assets/js/growth.js
-node --check assets/js/brief.js
-node scripts/check_brief.cjs
+node --check assets/js/contact.js
+node scripts/check_contact.cjs
 git diff --check
 ```
 
@@ -83,7 +83,7 @@ Python image optimization requires Pillow. Generated HTML is deployed as ordinar
 |---|---|---|---|
 | P0 | Review site copy and deploy the prepared static changes | Owner/Codex when authorised | Ready for review after local validation |
 | P0 | Verify Google Search Console and Bing Webmaster Tools ownership; submit sitemap.xml and inspect the new service URLs | Owner | Account access required |
-| P0 | Check GA4 contact_intent and brief_prepared in the production property | Owner | After deployment |
+| P0 | Check GA4 contact_intent and generate_lead in the production property | Owner | After deployment |
 | P1 | Mark only appropriate intent events as key events; reconcile actual qualified enquiries separately | Owner | After data review |
 | P1 | Check production compression, caching, mobile PageSpeed and Search Console Core Web Vitals | Owner/Codex | After deployment |
 | P1 | Provide current registration evidence, an approved example of an erasure report and an approved collection record | Owner | Evidence not yet organised |

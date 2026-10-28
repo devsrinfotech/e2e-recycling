@@ -48,7 +48,7 @@ e2e Recycling is a KSPCB-registered B2B e-waste recycling and ITAD provider base
 - [Server decommissioning checklist](https://e2erecycling.com/server-decommissioning-checklist.html)
 - [Data erasure report checklist](https://e2erecycling.com/data-erasure-certificate-checklist.html)
 - [Multi-office collection planning](https://e2erecycling.com/multi-office-e-waste-collection-plan.html)
-- [Enquiry brief builder](https://e2erecycling.com/it-disposal-brief.html)
+- [Corporate enquiry form with optional project requirements](https://e2erecycling.com/contact-us.html#corporate-contact-form)
 
 ## Scope and evidence
 

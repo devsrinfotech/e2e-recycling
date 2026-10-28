@@ -55,6 +55,21 @@
   form.addEventListener('submit', async function (event) {
     event.preventDefault();
     if (busy || !form.reportValidity()) return;
+    var details = form.elements.requirement_details.value.trim();
+    [
+      ['project_service', 'Main requirement'],
+      ['data_preference', 'Data handling preference'],
+      ['processing_location', 'Processing location'],
+      ['project_timing', 'Timing / access / reporting']
+    ].forEach(function (field) {
+      var value = form.elements[field[0]].value.trim();
+      if (value) details += '\n\n' + field[1] + ': ' + value;
+    });
+    if (details.length > 2000) {
+      announce('Please shorten your project details to fit within 2,000 characters in total.', true);
+      status.focus();
+      return;
+    }
     var token = widget !== undefined && window.grecaptcha ? window.grecaptcha.getResponse(widget) : '';
     if (!token) {
       loadCaptcha();
@@ -67,6 +82,7 @@
       body.set(name, form.elements[name].value.trim());
     });
     body.set('recaptcha_response', token);
+    body.set('requirement_details', details);
     busy = true;
     submit.disabled = true;
     form.setAttribute('aria-busy', 'true');
