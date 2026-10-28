@@ -6,6 +6,7 @@ Source stylesheets remain editable; no CSS parser dependency is needed at runtim
 from pathlib import Path
 from html.parser import HTMLParser
 import re
+import hashlib
 
 ROOT=Path(__file__).resolve().parent.parent
 
@@ -72,11 +73,12 @@ def build():
     bundled=re.sub(r'\s+',' ',bundled)
     bundled=re.sub(r'\s*([{};])\s*',r'\1',bundled)
     ROOT.joinpath('assets/css/site.min.css').write_text(bundled+'\n',encoding='utf-8')
+    version=hashlib.sha256((bundled+'\n').encode('utf-8')).hexdigest()[:12]
     for path in ROOT.glob('*.html'):
         text=path.read_text(encoding='utf-8')
         if 'class="growth-page"' in text: continue
-        text=re.sub(r'<link\b[^>]*href="(?:\./)?assets/css/(?:bootstrap\.min|font-awesome\.min|dark|growth|site\.min)\.css"[^>]*>','',text)
-        text=text.replace('</head>','<link rel="stylesheet" href="assets/css/site.min.css">\n</head>')
+        text=re.sub(r'<link\b[^>]*href="(?:\./)?assets/css/(?:bootstrap\.min|font-awesome\.min|dark|growth|site\.min)\.css(?:\?[^\"]*)?"[^>]*>\s*','',text)
+        text=text.replace('</head>',f'<link rel="stylesheet" href="assets/css/site.min.css?v={version}">\n</head>')
         path.write_text('\n'.join(line.rstrip() for line in text.splitlines())+'\n',encoding='utf-8')
     print(f'Legacy stylesheet bundle: {before:,} -> {len(bundled.encode("utf-8")):,} bytes.')
 
