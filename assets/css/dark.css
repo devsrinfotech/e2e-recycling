@@ -28,7 +28,7 @@ Table of contents
 font & reset css
 --------------------------------------------- 
 */
-@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,600,700&amp;subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,600,700&subset=latin-ext");
 /* 
 ---------------------------------------------
 reset
@@ -2932,6 +2932,66 @@ contact
 }
 .contact-bottom .contact-form .btn-primary-line {
   margin-bottom: 0px !important;
+}
+
+/* Corporate site: readable content, clear actions, and responsive layouts. */
+:focus-visible {
+  outline: 3px solid #176f3d;
+  outline-offset: 3px;
+}
+.header-area { background: #fff; box-shadow: 0 2px 18px rgba(22, 47, 37, .07); }
+.header-area .main-nav .nav li a:hover { color: #176f3d; }
+.hero-eyebrow {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #176f3d;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.welcome-area .header-text h1 { font-size: clamp(32px, 3.3vw, 48px); line-height: 1.15; letter-spacing: -.02em; }
+.welcome-area .header-text p { color: #344c45; font-weight: 400; font-size: 17px; line-height: 1.7; letter-spacing: 0; }
+.hero-secondary-link { display: inline-block; margin: 12px 0 12px 20px; color: #176f3d; font-weight: 800; }
+.hero-secondary-link:hover { color: #104b2b; text-decoration: underline; }
+.header-area .main-nav .nav li.mobile-contact { display: none; }
+.hero-icons { gap: 12px; }
+.hero-icons img { width: 120px; height: 120px; object-fit: contain; }
+.hero-icons h4 { color: #176f3d; }
+.left-heading .section-title { color: #176f3d; }
+.features-small-item { border: 1px solid #e0e9e1; border-radius: 16px; box-shadow: 0 8px 24px rgba(24, 55, 36, .06); }
+.features-small-item .features-title { color: #173d2c; font-weight: 700; font-size: 19px; letter-spacing: 0; }
+.features-small-item p { color: #425b50; font-size: 15px; letter-spacing: 0; line-height: 1.7; }
+.page .page-bottom div.features-small-item { cursor: default; }
+.page .page-bottom div.features-small-item:hover:before { opacity: 0; }
+.page .page-bottom div.features-small-item:hover .features-title { color: #173d2c; }
+.page .page-bottom div.features-small-item:hover p { color: #425b50; }
+.accordion { border: 1px solid #e0e9e1; box-shadow: 0 8px 24px rgba(24, 55, 36, .06); }
+.accordion .accordion-item .accordion-header:hover { background: #f0f7f1; padding-left: 0; }
+.accordion .accordion-item .accordion-header .accordion-button { color: #173d2c; font-weight: 700; letter-spacing: 0; }
+.accordion .accordion-item .accordion-body { color: #425b50; letter-spacing: 0; }
+.contact-bottom .contact-form label { display: block; margin-bottom: 8px; color: #173d2c; font-weight: 700; }
+.contact-bottom .contact-form input, .contact-bottom .contact-form textarea { border-color: #bccfc1; margin-bottom: 20px; }
+.contact-bottom .contact-form input:focus, .contact-bottom .contact-form textarea:focus { border-color: #176f3d; padding-left: 20px; box-shadow: 0 0 0 3px rgba(23, 111, 61, .15); }
+.contact-bottom .contact-form textarea { resize: vertical; }
+.contact-form-note { color: #425b50; line-height: 1.6; margin-bottom: 24px; }
+.contact-form-note a { color: #176f3d; text-decoration: underline; }
+footer .footer-nav li a span, footer .copyright { color: #49645a; }
+@media (max-width: 991px) {
+  .header-area .main-nav .nav li.mobile-contact { display: block; }
+  .welcome-area { background: #f4f8f2; }
+  .welcome-area .right-bg { display: none; }
+  .welcome-area .header-text { position: relative; top: auto !important; transform: none !important; padding: 64px 0 56px; text-align: left; }
+  .welcome-area .header-text h1 { color: #173d2c; font-size: clamp(30px, 7vw, 42px) !important; line-height: 1.17 !important; text-align: left; margin-bottom: 20px !important; }
+  .welcome-area .header-text p { color: #344c45; text-align: left; font-size: 16px; line-height: 1.65; padding: 0; margin-bottom: 24px; }
+  .welcome-area .header-text p:before, .welcome-area .header-text p:after { display: none; }
+  .welcome-area .header-text .btn-assessment { background: #176f3d; border-color: #176f3d; color: #fff; }
+  .welcome-area .header-text .btn-assessment:hover { background: #104b2b; color: #fff; }
+  .hero-secondary-link { margin-left: 0; margin-right: 16px; }
+  .hero-icons { padding: 16px 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
 
 @media (max-width: 991px) {
