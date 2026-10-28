@@ -44,3 +44,15 @@ Statuses: pending · in-progress · awaiting-evidence · done · deferred: <reas
 - [x] Repair the enquiry path with accessible mailto fields and clickable contact details (Codex, 2026-08-25).
 - [x] Correct sitemap and llms.txt inconsistencies (Codex, 2026-08-25).
 - [ ] Organize certifications, testimonials, case studies and analytics for a later proof/CRO phase (Owner, later).
+
+## Organic acquisition implementation — 2026-10-28
+
+The owner requested corporate IT disposal and standalone data-erasure acquisition across metropolitan India. Resuming the approved B2B positioning, this implementation adds four service pages, three priority-city pages, a national coverage guide, five buyer articles, a resource hub and a local enquiry brief builder. The owner confirmed TruWipe at https://truwipe.com/ alongside Blancco and BitRaser.
+
+- [x] Build the service and buyer-content clusters, with crawlable internal links and sitemap entries (Codex).
+- [x] Add a blank inventory template and an ungated brief/copy/download/email tool (Codex).
+- [x] Reduce image payloads and remove unused runtime plugin requests (Codex).
+- [x] Add contact-intent and resource interaction events to the existing analytics property (Codex).
+- [ ] Verify production indexing, actual enquiries and real-user performance after deployment (Owner).
+
+See ORGANIC-GROWTH.md for the intent map, account work, evidence needs, performance reproduction and 90-day measurement plan. Existing CRO phases awaiting evidence remain open; no unprovided traffic, case-study or certification evidence has been invented.
