@@ -1,0 +1,20 @@
+{
+  "username": "e2e Recycling | Website enquiries",
+  "allowed_mentions": {"parse": []},
+  "embeds": [{
+    "title": "New corporate recycling enquiry",
+    "color": 2391116,
+    "url": "https://e2e.srinfotech.biz/app/e2e-website-leads/{{ doc.name | urlencode }}",
+    "description": {{ ((doc.requirement_details or "Not provided")[:2000]) | tojson }},
+    "fields": [
+      {"name": "Company", "value": {{ ((doc.company or "Not provided")[:160]) | tojson }}, "inline": true},
+      {"name": "Contact", "value": {{ ((doc.contact_name or "Not provided")[:120]) | tojson }}, "inline": true},
+      {"name": "Work email", "value": {{ ((doc.work_email or "Not provided")[:254]) | tojson }}, "inline": true},
+      {"name": "Phone", "value": {{ ((doc.phone or "Not provided")[:40]) | tojson }}, "inline": true},
+      {"name": "City / locations", "value": {{ ((doc.citylocation or "Not provided")[:140]) | tojson }}, "inline": false},
+      {"name": "Assets / approximate volume", "value": {{ ((doc.asset_typesapproximate_volume or "Not provided")[:1000]) | tojson }}, "inline": false},
+      {"name": "CRM reference", "value": {{ doc.name | tojson }}, "inline": true}
+    ],
+    "footer": {"text": "e2e Recycling • Website enquiry"}
+  }]
+}

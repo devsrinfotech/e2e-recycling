@@ -42,7 +42,7 @@ def optimise_html(path, mapping):
     text = re.sub(r'<!--.*?-->', '', text, flags=re.S)
     text = re.sub(r'<div\s+id="preloader"[^>]*>\s*</div>', '', text)
     # Plugin functionality is replaced by native navigation, FAQs and CSS images.
-    text = re.sub(r'<script\b[^>]*\bsrc=["\'](?:assets/js/(?!custom\.js|growth\.js|brief\.js)[^"\']+|https://cdn\.jsdelivr\.net/[^"\']+)["\'][^>]*>\s*</script>', '', text, flags=re.I)
+    text = re.sub(r'<script\b[^>]*\bsrc=["\'](?:assets/js/(?!custom\.js|growth\.js|brief\.js|contact\.js)[^"\']+|https://cdn\.jsdelivr\.net/[^"\']+)["\'][^>]*>\s*</script>', '', text, flags=re.I)
     text = re.sub(r'<link\b[^>]*(?:magnific-popup\.css|silverBox\.min\.css|cdn\.jsdelivr\.net)[^>]*>', '', text, flags=re.I)
     text = re.sub(r'\s+data-scroll-reveal="[^"]*"', '', text)
     text = re.sub(r'"@type"\s*:\s*"RecyclingCenter"', '"@type": ["Organization", "RecyclingCenter"]', text)

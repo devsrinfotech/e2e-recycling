@@ -176,16 +176,23 @@
 								</div>
 
 								<div class="col-lg-8 col-md-6 col-sm-12">
-									<form action="mailto:info@e2erecycling.com" method="post" enctype="text/plain" class="contact-form">
-										<p class="contact-form-note">Enquire about equipment recycling, data erasure only, or both. Submitting opens your email app; review and send the message there. You can also email <a href="mailto:info@e2erecycling.com">info@e2erecycling.com</a>, call <a href="tel:+919035699161">+91 9035699161</a>, or <a href="it-disposal-brief.html">build a project brief</a>.</p>
+									<form id="corporate-contact-form" action="mailto:info@e2erecycling.com" method="post" enctype="text/plain" class="contact-form">
+										<p class="contact-form-note">Enquire about equipment recycling, data erasure only, or both. Complete the form and security check to send your enquiry directly to our team. Please do not include passwords or confidential device data. You can also email <a href="mailto:info@e2erecycling.com">info@e2erecycling.com</a>, call <a href="tel:+919035699161">+91 9035699161</a>, or <a href="it-disposal-brief.html">build a project brief</a>.</p>
 											<div class="row">
-												<div class="col-lg-6 col-md-12 col-sm-12"><label for="contact-name">Contact name</label><input id="contact-name" name="contact_name" type="text" autocomplete="name" required></div>
-												<div class="col-lg-6 col-md-12 col-sm-12"><label for="company">Company</label><input id="company" name="company" type="text" autocomplete="organization" required></div>
-												<div class="col-lg-6 col-md-12 col-sm-12"><label for="work-email">Work email</label><input id="work-email" name="work_email" type="email" autocomplete="email" required></div>
-												<div class="col-lg-6 col-md-12 col-sm-12"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" required></div>
-												<div class="col-lg-12"><label for="locations">City / locations</label><input id="locations" name="city_locations" type="text" required></div>
-												<div class="col-lg-12"><label for="assets">Asset types / approximate volume</label><textarea id="assets" name="asset_types_volume" required></textarea></div>
-												<div class="col-lg-12"><label for="requirements">Requirement details, including data-bearing assets, service, and timing</label><textarea id="requirements" name="requirement_details" required></textarea></div>
+												<div class="col-lg-6 col-md-12 col-sm-12"><label for="contact-name">Contact name</label><input id="contact-name" maxlength="120" name="contact_name" type="text" autocomplete="name" required></div>
+												<div class="col-lg-6 col-md-12 col-sm-12"><label for="company">Company</label><input id="company" maxlength="140" name="company" type="text" autocomplete="organization" required></div>
+												<div class="col-lg-6 col-md-12 col-sm-12"><label for="work-email">Work email</label><input id="work-email" maxlength="140" name="work_email" type="email" autocomplete="email" required></div>
+												<div class="col-lg-6 col-md-12 col-sm-12"><label for="phone">Phone</label><input id="phone" maxlength="40" name="phone" type="tel" autocomplete="tel" required></div>
+												<div class="col-lg-12"><label for="locations">City / locations</label><input id="locations" maxlength="140" name="city_locations" type="text" required></div>
+												<div class="col-lg-12"><label for="assets">Asset types / approximate volume</label><textarea id="assets" maxlength="1000" name="asset_types_volume" required></textarea></div>
+												<div class="col-lg-12"><label for="requirements">Requirement details, including data-bearing assets, service, and timing</label><textarea id="requirements" maxlength="2000" name="requirement_details" required></textarea></div>
+												<div class="col-lg-12 contact-verification">
+												<label class="contact-honeypot" aria-hidden="true">Leave this field empty<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+												<div id="contact-captcha" tabindex="-1" aria-label="Security verification"></div>
+												<p class="contact-privacy">We use your details to respond to your enquiry and manage it in our CRM, including internal team notifications. This form uses Google reCAPTCHA; Google's <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer">Terms of Service</a> apply.</p>
+												<p id="contact-status" class="contact-status" role="status" aria-live="polite" tabindex="-1"></p>
+												<noscript><p>JavaScript is needed for secure online submission. Without it, this form opens your email app; review and send your enquiry there.</p></noscript>
+												</div>
 												<div class="col-lg-12"><button type="submit" class="btn-primary-line btn-assessment">Request a Corporate E-Waste Assessment</button></div>
 											</div>
 										</form>
@@ -249,6 +256,7 @@
 
 	<script defer src="assets/js/custom.js"></script>
 <script defer src="assets/js/growth.js"></script>
+<script defer src="assets/js/contact.js"></script>
 </body>
 
 </html>
